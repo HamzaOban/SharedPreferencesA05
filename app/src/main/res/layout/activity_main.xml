@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameTextField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:hint="Adınızı giriniz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/ageTextField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:hint="Yaşınızı giriniz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextField"
+        app:layout_constraintVertical_bias="0.03">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/jobTextField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:hint="Mesleğinizi giriniz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextField"
+        app:layout_constraintVertical_bias="0.03">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/kaydet"
+        android:textSize="16sp"
+        app:backgroundTint="#7CAE92"
+        app:icon="@drawable/check"
+        app:iconPadding="-1dp"
+        app:iconSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/jobTextField"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/jobTextField"
+        app:layout_constraintTop_toBottomOf="@+id/jobTextField">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleteButton"
+        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+
+        android:layout_width="140dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sil"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+
+        app:backgroundTint="#B0B9F6"
+        app:icon="@drawable/baseline_delete_24"
+        app:iconPadding="10dp"
+        app:iconSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/jobTextField"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/jobTextField"
+        app:layout_constraintTop_toBottomOf="@+id/jobTextField">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton">
+
+        <LinearLayout
+            android:layout_margin="4dp"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Adınız"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/prefNameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:text="Yaşınız"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/prefAgeTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+            <TextView
+                android:text="Mesleğiniz"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/prefJobTextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

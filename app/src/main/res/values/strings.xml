@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SharedPreferences</string>
+    <string name="kaydet">Save</string>
+    <string name="sil">Delete</string>
+</resources>
